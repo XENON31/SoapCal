@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة تكلفة إنتاج الصابون - عبدالعزيز رضوان</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>حاسبة تكلفة إنتاج الصابون</h1>
+            <p>أداة ذكية لحساب تكاليف إنتاج الصابون بدقة</p>
+            <div class="developer">مطور بواسطة: عبدالعزيز رضوان</div>
+        </header>
+
+        <div class="ai-intelligence">
+            <div class="ai-header">
+                <span class="ai-icon">🤖</span>
+                <h3>نظام الذكاء الاصطناعي</h3>
+            </div>
+            <p class="ai-message">أنا هنا لمساعدتك في حساب تكاليف إنتاج الصابون بدقة متناهية!</p>
+        </div>
+
+        <section class="materials-section">
+            <h2>المواد الخام وأسعارها</h2>
+            <div class="table-container">
+                <table id="materialsTable">
+                    <thead>
+                        <tr>
+                            <th>المادة الخام</th>
+                            <th>سعر الكيلو (جنيه)</th>
+                            <th>الكمية المستخدمة (جرام)</th>
+                            <th>التكلفة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- سيتم ملؤها بواسطة JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="inputs-section">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="soapOutput">كمية الصابون الناتج (قطعة):</label>
+                    <input type="number" id="soapOutput" min="1" value="1">
+                </div>
+                
+                <div class="input-group">
+                    <label for="soapPerPack">عدد الصابون في الباكت:</label>
+                    <input type="number" id="soapPerPack" min="1" value="27">
+                </div>
+            </div>
+            
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="packagingCost">تكلفة تغليف الباكت (جنيه):</label>
+                    <input type="number" id="packagingCost" min="0" value="0" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label for="profitMargin">نسبة الربح (%):</label>
+                    <input type="number" id="profitMargin" min="0" value="30" step="1">
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <h2>نتائج الحساب</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>تكلفة الخلطة الإجمالية</h3>
+                    <p id="totalMixtureCost">0.00 جنيه</p>
+                </div>
+                <div class="result-card">
+                    <h3>تكلفة الصابونة الواحدة</h3>
+                    <p id="unitCost">0.00 جنيه</p>
+                </div>
+                <div class="result-card">
+                    <h3>تكلفة إنتاج الباكت</h3>
+                    <p id="packProductionCost">0.00 جنيه</p>
+                </div>
+                <div class="result-card">
+                    <h3>سعر بيع الباكت للمستهلك</h3>
+                    <p id="packSalePrice">0.00 جنيه</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="actions">
+            <button id="calculateBtn" class="btn-primary">حساب التكاليف</button>
+            <button id="resetBtn" class="btn-secondary">إعادة تعيين</button>
+        </div>
+
+        <footer>
+            <p>تم التطوير بواسطة عبدالعزيز رضوان باستخدام تقنيات الذكاء الاصطناعي المتقدمة</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
